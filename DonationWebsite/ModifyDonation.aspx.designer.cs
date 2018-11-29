@@ -10,7 +10,7 @@
 namespace DonationWebsite {
     
     
-    public partial class ModifyDonor {
+    public partial class ModifyDonation {
         
         /// <summary>
         /// GridView1 control.

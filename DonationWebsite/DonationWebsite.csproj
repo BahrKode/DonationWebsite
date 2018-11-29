@@ -130,6 +130,7 @@
     <Content Include="AddDonation.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\GridViewEdit.css" />
     <Content Include="Content\mygrid.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
@@ -147,6 +148,7 @@
     <Content Include="Database.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="index.htm" />
+    <Content Include="ModifyDonation.aspx" />
     <Content Include="ModifyDonor.aspx" />
     <Content Include="mygrid.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -209,6 +211,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyDonation.aspx.cs">
+      <DependentUpon>ModifyDonation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifyDonation.aspx.designer.cs">
+      <DependentUpon>ModifyDonation.aspx</DependentUpon>
     </Compile>
     <Compile Include="ModifyDonor.aspx.cs">
       <DependentUpon>ModifyDonor.aspx</DependentUpon>

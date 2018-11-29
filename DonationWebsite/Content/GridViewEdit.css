@@ -1,0 +1,11 @@
+﻿.GridViewEdit input[type=text]
+{
+    width: 130px;
+}
+/* size textboxes */
+
+.GridViewEditselect
+{
+    width: 130px;
+}
+/* size drop down lists */
