@@ -8,9 +8,10 @@
                 </td>
                 <td class="auto-style2" style="padding-left: 1px; width: 10em; height: 3em; font-size: 24px;">
                     <asp:DropDownList ID="dropList" runat="server">
-                        <asp:ListItem>Add Donor</asp:ListItem>
+                        <asp:ListItem>Make Selection</asp:ListItem>
                         <asp:ListItem>Add Donation</asp:ListItem>
                         <asp:ListItem>Modify Donor</asp:ListItem>
+                        <asp:ListItem>Modify Donation</asp:ListItem>
                         <asp:ListItem>View Donations</asp:ListItem>
                         <asp:ListItem>Generate Report</asp:ListItem>
                     </asp:DropDownList>
@@ -33,5 +34,9 @@
         <br />
         <br />
         <asp:Button class="buttons" ID="btnSubmit" style="align-content: center; width: 10em; height: 2em; font-size: 24px;" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Visible="False" Font-Size="Large" ForeColor="Red"></asp:Label>
     </div>
 </asp:Content>

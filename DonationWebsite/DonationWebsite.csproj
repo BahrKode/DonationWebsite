@@ -127,7 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contact.aspx" />
+    <Content Include="AddDonation.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\mygrid.css" />
@@ -147,6 +147,7 @@
     <Content Include="Database.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="index.htm" />
+    <Content Include="ModifyDonor.aspx" />
     <Content Include="mygrid.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -183,15 +184,15 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="AddDonation.aspx.cs">
+      <DependentUpon>AddDonation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="AddDonation.aspx.designer.cs">
+      <DependentUpon>AddDonation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyDonor.aspx.cs">
+      <DependentUpon>ModifyDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifyDonor.aspx.designer.cs">
+      <DependentUpon>ModifyDonor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
