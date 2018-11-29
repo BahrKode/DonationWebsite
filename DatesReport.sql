@@ -1,0 +1,1 @@
+SELECT * FROM dbo.Donations WHERE Date BETWEEN MinDate AND MaxDate;
