@@ -1,0 +1,1 @@
+SELECT SUM(Donation_Amount) FROM dbo.Donations WHERE Date BETWEEN MinDate AND MaxDate;
