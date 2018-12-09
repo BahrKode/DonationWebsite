@@ -3,6 +3,35 @@
     <div style="margin-top: 22%;">
     <h1 style="padding-bottom:20px;">Donations</h1>
 
+                     <br />
+        <strong><span style="font-size: medium">Report Start Date</span></strong>&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;<asp:Button ID="Button1" runat="server" BorderColor="White" BorderStyle="Groove" OnClick="Button1_Click" Text="‎Select" />
+&nbsp;<asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="Calendar1_SelectionChanged" Visible="False" Width="330px">
+            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+            <DayStyle BackColor="#CCCCCC" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+            <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+            <TodayDayStyle BackColor="#999999" ForeColor="White" />
+        </asp:Calendar>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: medium"><strong>Report End Date&nbsp;&nbsp; </strong></span>
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+&nbsp;<asp:Button ID="Button2" runat="server" BorderColor="White" BorderStyle="Groove" Text="Select" />
+&nbsp;<asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Visible="False" Width="330px">
+            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+            <DayStyle BackColor="#CCCCCC" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+            <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+            <TodayDayStyle BackColor="#999999" ForeColor="White" />
+        </asp:Calendar>
+&nbsp;
+        <br />
+        <br />
+
                      <asp:GridView ID="GridView1" onselectedindexchanged="GridView1_SelectedIndexChanged" runat="server" DataSourceID="SqlDataSource1" ItemStyle-HorizontalAlign="Center" AutoGenerateColumns="False" HorizontalAlign="Center" AllowPaging="True" BackColor="White" BorderColor="#CCCCCC" Font-Size="Larger" BorderStyle="Solid" BorderWidth="2px" CellPadding="10">
                          <AlternatingRowStyle HorizontalAlign="Center" />
                          <Columns>
@@ -30,7 +59,7 @@
                          <SortedDescendingHeaderStyle BackColor="#00547E" HorizontalAlign="Center" />
                      </asp:GridView>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DonationConnectionString %>"  SelectCommand="SELECT [Person_FName], [Person_LName], [Person_Email], [Person_Phone], [Donation_Amount], [Donation_Type], [Date] FROM [Donors]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DonationConnectionString %>"  SelectCommand="SELECT [Person_FName], [Person_LName], [Person_Email], [Person_Phone], [Donation_Amount], [Donation_Type], [Date] FROM [Donors] WHERE [Date] BETWEEN TextBox1.Text AND TextBox2.Text "></asp:SqlDataSource>
      </div>
     <br />
      <br />

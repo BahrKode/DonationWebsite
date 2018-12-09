@@ -16,6 +16,28 @@ namespace DonationWebsite
 
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Calendar1.Visible = true;
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            TextBox1.Text = Calendar1.SelectedDate.ToShortDateString();
+            Calendar1.Visible = false;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Calendar2.Visible = true;
+        }
+
+        protected void Calendar2_SelectionChanged(object sender, EventArgs e)
+        {
+            TextBox2.Text = Calendar2.SelectedDate.ToShortDateString();
+            Calendar2.Visible = false;
+        }
+
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow row = GridView1.SelectedRow;
@@ -33,5 +55,7 @@ namespace DonationWebsite
             string Amount = row.Cells[5].Text;
             string Type = row.Cells[6].Text;
         }
+
+        
     }
 }
