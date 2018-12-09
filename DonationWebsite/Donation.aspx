@@ -59,7 +59,7 @@
                          <SortedDescendingHeaderStyle BackColor="#00547E" HorizontalAlign="Center" />
                      </asp:GridView>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DonationConnectionString %>"  SelectCommand="SELECT [Person_FName], [Person_LName], [Person_Email], [Person_Phone], [Donation_Amount], [Donation_Type], [Date] FROM [Donors] WHERE [Date] BETWEEN TextBox1.Text AND TextBox2.Text "></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DonationConnectionString %>"  SelectCommand="SELECT [Person_FName], [Person_LName], [Person_Email], [Person_Phone], [Donation_Amount], [Donation_Type], [Date] FROM [Donors] WHERE [Date].ToShortDateString() BETWEEN TextBox1.Text AND TextBox2.Text "></asp:SqlDataSource>
      </div>
     <br />
      <br />
